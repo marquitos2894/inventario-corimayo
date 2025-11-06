@@ -12,9 +12,8 @@ TABLE_NAME = "mainstock"
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_API_KEY)
 
 # --- Función para traer todos los datos ---
-@st.cache_data(show_spinner=False)
-if st.button("🔄 Actualizar datos"):
-    st.cache_data.clear()
+# --- @st.cache_data(show_spinner=False) ---
+
 
 def fetch_all_data():
     batch_size = 1000
